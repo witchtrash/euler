@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "euler"
+version = "0.1.0"
+description = "Project Euler solutions"
+authors = ["mari <mari@hakke.ro>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = "^0.4.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.11b1"
+mypy = "^0.910"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
