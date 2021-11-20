@@ -81,6 +81,9 @@ def prime_factorize(n: int, primes: Optional[list[int]]) -> List[int]:
     factors: List[int] = []
 
     for p in primes:
+        if p > n:
+            break
+
         while n % p == 0:
             factors.append(p)
             n //= p

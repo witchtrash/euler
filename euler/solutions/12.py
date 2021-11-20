@@ -10,7 +10,7 @@ test_input = 5
 def solve(x: int) -> int:
     triangle = 3
     n = 3
-    primes = generate_primes(1_000_000)
+    primes = generate_primes(1_000)
 
     while True:
         divisors = 1
