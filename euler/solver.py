@@ -5,5 +5,5 @@ class Solver(Protocol):
     def test(self) -> None:
         pass
 
-    def solve(self) -> None:
+    def run(self) -> None:
         pass

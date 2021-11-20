@@ -9,7 +9,7 @@ from euler.solver import Solver
 def main(problem: int, test: bool = False) -> None:
     try:
         solution = cast(Solver, importlib.import_module(f"euler.solutions.{problem}"))
-        solution.test() if test else solution.solve()
+        solution.test() if test else solution.run()
     except ModuleNotFoundError:
         print(f"No solution for problem #{problem}!")
 
