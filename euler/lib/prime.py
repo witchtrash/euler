@@ -1,6 +1,6 @@
 import math
 from itertools import cycle
-from typing import List
+from typing import List, Optional
 
 
 def generate_primes(n: int) -> List[int]:
@@ -65,7 +65,7 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def prime_factorize(n: int) -> List[int]:
+def prime_factorize(n: int, primes: Optional[list[int]]) -> List[int]:
     """
     Prime factorize a positive number greater than 1, returning a list of prime factors.
     """
@@ -76,7 +76,8 @@ def prime_factorize(n: int) -> List[int]:
     if is_prime(n):
         return [n]
 
-    primes = generate_primes(math.ceil(math.sqrt(n)))
+    if primes is None:
+        primes = generate_primes(n // 2 + 1)
     factors: List[int] = []
 
     for p in primes:

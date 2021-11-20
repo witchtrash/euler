@@ -31,7 +31,7 @@ def solve(x: int) -> int:
         )
     )
 
-    directions = [
+    directions: list[list[tuple[int, int]]] = [
         [(0, 0), (0, -1), (0, -2), (0, -3)],
         [(0, 0), (0, 1), (0, 2), (0, 3)],
         [(0, 0), (-1, 0), (-2, 0), (-3, 0)],
@@ -45,7 +45,7 @@ def solve(x: int) -> int:
         for x in range(len(row)):
             for direction in directions:
                 product = 1
-                for i, (dx, dy) in enumerate(direction):
+                for dx, dy in direction:
                     try:
                         product *= grid[dy + y][dx + x]
                     except IndexError:
