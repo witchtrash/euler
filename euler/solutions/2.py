@@ -14,9 +14,9 @@ def solve(limit: int) -> int:
         a, b = b, a + b
 
 
-def test() -> None:
-    pass
+def test() -> str:
+    return str("No test case")
 
 
-def run() -> None:
-    print(solve(problem_input))
+def run() -> str:
+    return str(solve(problem_input))

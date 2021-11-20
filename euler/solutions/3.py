@@ -10,9 +10,9 @@ def solve(n: int) -> List[int]:
     return prime_factorize(n)
 
 
-def test() -> None:
-    print(solve(test_input))
+def test() -> str:
+    return str(solve(test_input))
 
 
-def run() -> None:
-    print(solve(problem_input))
+def run() -> str:
+    return str(solve(problem_input))

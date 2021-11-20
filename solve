@@ -1,5 +1,6 @@
 #!python
 import importlib
+from time import perf_counter_ns
 from typing import cast
 
 import typer
@@ -22,7 +23,26 @@ def solve(
     """
     try:
         solution = cast(Solver, importlib.import_module(f"euler.solutions.{problem}"))
-        solution.test() if test else solution.run()
+
+        timer_start = perf_counter_ns()
+        res = solution.test() if test else solution.run()
+        timer_stop = perf_counter_ns()
+        delta = timer_stop - timer_start
+
+        result = typer.style(
+            res,
+            fg=typer.colors.GREEN,
+            bold=True,
+        )
+        typer.echo(f"Solution: {result}")
+
+        run_time = typer.style(
+            f"{delta / 1000 ** 2} ms",
+            fg=typer.colors.BRIGHT_CYAN,
+            bold=True,
+        )
+        typer.echo(f"Run time: {run_time}")
+
     except ModuleNotFoundError:
         print(f"No solution for problem #{problem}!")
 

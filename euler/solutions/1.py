@@ -11,9 +11,9 @@ def solve(limit: int) -> int:
     return div_sum(limit, 3) + div_sum(limit, 5) - div_sum(limit, 15)
 
 
-def test() -> None:
-    print(solve(test_input))
+def test() -> str:
+    return str(solve(test_input))
 
 
-def run() -> None:
-    print(solve(problem_input))
+def run() -> str:
+    return str(solve(problem_input))

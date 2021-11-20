@@ -39,9 +39,9 @@ def solve(n: int) -> int:
     return mx
 
 
-def test() -> None:
-    print(solve(test_input))
+def test() -> str:
+    return str(solve(test_input))
 
 
-def run() -> None:
-    print(solve(problem_input))
+def run() -> str:
+    return str(solve(problem_input))

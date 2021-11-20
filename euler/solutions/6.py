@@ -9,9 +9,9 @@ def solve(nums: range) -> int:
     return square_of_sum - sum_of_squares
 
 
-def test() -> None:
-    print(solve(test_input))
+def test() -> str:
+    return str(solve(test_input))
 
 
-def run() -> None:
-    print(solve(problem_input))
+def run() -> str:
+    return str(solve(problem_input))

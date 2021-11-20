@@ -2,8 +2,8 @@ from typing import Protocol
 
 
 class Solver(Protocol):
-    def test(self) -> None:
+    def test(self) -> str:
         pass
 
-    def run(self) -> None:
+    def run(self) -> str:
         pass
