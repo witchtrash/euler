@@ -1,3 +1,4 @@
+#!python
 import importlib
 from typing import cast
 
@@ -5,8 +6,20 @@ import typer
 
 from euler.solver import Solver
 
+app = typer.Typer(
+    help="Project Euler solutions",
+    add_completion=False,
+)
 
-def main(problem: int, test: bool = False) -> None:
+
+@app.command()
+def solve(
+    problem: int = typer.Option(..., help="Problem number"),
+    test: bool = typer.Option(False, help="Run against the test case, if available"),
+) -> None:
+    """
+    Run a solution.
+    """
     try:
         solution = cast(Solver, importlib.import_module(f"euler.solutions.{problem}"))
         solution.test() if test else solution.run()
@@ -15,4 +28,4 @@ def main(problem: int, test: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
