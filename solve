@@ -44,7 +44,13 @@ def solve(
         typer.echo(f"Run time: {run_time}")
 
     except ModuleNotFoundError:
-        print(f"No solution for problem #{problem}!")
+        typer.echo(
+            typer.style(
+                f"No solution found for problem #{problem}!",
+                fg=typer.colors.BRIGHT_RED,
+                bold=True,
+            )
+        )
 
 
 if __name__ == "__main__":
