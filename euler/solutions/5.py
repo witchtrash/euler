@@ -1,8 +1,8 @@
 import math
 from functools import reduce
 
-problem_input = range(2, 20)
-test_input = range(2, 10)
+problem_input = range(2, 21)
+test_input = range(2, 11)
 
 
 def solve(nums: range) -> int:
