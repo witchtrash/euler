@@ -1,8 +1,7 @@
 import math
-from typing import List
 
 
-def divisors(n: int) -> List[int]:
+def divisors(n: int) -> list[int]:
     """Get the proper divisors of a number n"""
 
     limit = int(math.sqrt(n)) + 1

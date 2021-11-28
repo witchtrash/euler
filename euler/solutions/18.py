@@ -1,5 +1,3 @@
-from typing import List
-
 problem_input = """75
 95 64
 17 47 82
@@ -22,7 +20,7 @@ test_input = """3
 
 
 def solve(s: str) -> int:
-    tree: List[List[int]] = []
+    tree: list[list[int]] = []
     for row in s.split("\n"):
         tree.append([int(x) for x in row.split()])
 

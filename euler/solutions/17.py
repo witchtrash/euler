@@ -1,5 +1,3 @@
-from typing import List
-
 problem_input = 1000
 test_input = 5
 
@@ -42,7 +40,7 @@ def solve(x: int) -> int:
 
     for i in range(1, x + 1):
         number = i
-        numeral: List[str] = []
+        numeral: list[str] = []
 
         for n in numeral_keys:
             if number >= n:

@@ -1,12 +1,10 @@
-from typing import List
-
 from euler.lib.prime import prime_factorize
 
 problem_input = 600851475143
 test_input = 13195
 
 
-def solve(n: int) -> List[int]:
+def solve(n: int) -> list[int]:
     return prime_factorize(n)
 
 

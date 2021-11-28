@@ -1,9 +1,8 @@
 import math
 from itertools import cycle
-from typing import List
 
 
-def generate_primes(n: int) -> List[int]:
+def generate_primes(n: int) -> list[int]:
     """
     Generate a list of primes smaller than n
     """
@@ -65,7 +64,7 @@ def is_prime(n: int) -> bool:
     return True
 
 
-def prime_factorize(n: int) -> List[int]:
+def prime_factorize(n: int) -> list[int]:
     """
     Prime factorize a positive number greater than 1, returning a list of prime factors.
     """
