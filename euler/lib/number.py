@@ -13,3 +13,9 @@ def divisors(n: int) -> list[int]:
             proper_divisors.add(i)
 
     return list(proper_divisors)
+
+
+def number_of_digits(n: int) -> int:
+    """Return the number of digits of number n"""
+
+    return math.floor(math.log10(n)) + 1
